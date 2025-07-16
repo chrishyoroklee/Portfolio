@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris Hyorok Lee - Music Technologist</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -139,7 +140,7 @@
 
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
@@ -344,40 +345,118 @@
             color: var(--accent);
         }
 
-        /* Music Section */
-        .music-grid {
+        /* Tech Stack Section */
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 2rem 0;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .music-card {
+        .tech-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
             border: 1px solid var(--glass-border);
             backdrop-filter: blur(20px);
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
         }
 
-        .music-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        .tech-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
         }
 
-        .music-title {
+        .tech-item:hover::before {
+            opacity: 0.1;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-item:hover .tech-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .tech-name {
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
+            position: relative;
+            z-index: 2;
         }
 
-        .music-artist {
+        .tech-description {
             color: var(--text-secondary);
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
         }
+
+        .tech-item:nth-child(1) { animation-delay: 0.1s; }
+        .tech-item:nth-child(2) { animation-delay: 0.2s; }
+        .tech-item:nth-child(3) { animation-delay: 0.3s; }
+        .tech-item:nth-child(4) { animation-delay: 0.4s; }
+        .tech-item:nth-child(5) { animation-delay: 0.5s; }
+        .tech-item:nth-child(6) { animation-delay: 0.6s; }
+        .tech-item:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Proficiency bars */
+        .proficiency-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-top: 1rem;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+        }
+
+        .proficiency-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+            transition: width 2s ease;
+            width: 0%;
+        }
+
+        .tech-item:hover .proficiency-fill {
+            width: var(--proficiency);
+        }
+
 
         /* Contact Section */
         .contact-content {
@@ -500,7 +579,7 @@
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">Chris Lee</a>
+            <a href="#" class="logo">Chris Hyorok Lee</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -526,6 +605,20 @@
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:hl3838@columbia.edu" class="contact-link">
+                    📧 hl3838@columbia.edu
+                </a>
+                <a href="https://www.linkedin.com/in/chris-hyorok-lee/" class="contact-link">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/chrishyoroklee" class="contact-link">
+                    🐙 GitHub
+                </a>
+                <a href="tel:+19175244328" class="contact-link">
+                    📱 (917) 524-4328
+                </a>
             </div>
         </div>
     </section>
@@ -642,39 +735,64 @@
         </div>
     </section>
 
-    <section id="music" class="fade-in">
-        <h2 class="section-title">T</h2>
-        <div class="music-grid">
-            <div class="music-card">
-                <h3 class="music-title">"Together"</h3>
-                <p class="music-artist">Original composition, production, and performance</p>
-                <p class="project-description">
-                    A complete solo project featuring original songwriting, production, and multi-instrumental performance.
-                </p>
-                <div class="project-links">
-                    <a href="https://www.youtube.com/watch?v=0JjZZSPADLc" class="project-link">Listen on YouTube</a>
+    <section id="tech-stack" class="fade-in">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="tech-stack">
+            <div class="tech-grid">
+                <div class="tech-item" style="--proficiency: 90%">
+                    <span class="tech-icon">⚡</span>
+                    <h3 class="tech-name">C/C++</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="music-card">
-                <h3 class="music-title">"Denial"</h3>
-                <p class="music-artist">Guitar performance and arrangement</p>
-                <p class="project-description">
-                    Collaborative arrangement and guitar work on this contemporary piece, showcasing versatile musical skills.
-                </p>
-                <div class="project-links">
-                    <a href="https://www.youtube.com/watch?v=Ns7DHaYiTSk" class="project-link">Listen on YouTube</a>
+                <div class="tech-item" style="--proficiency: 95%">
+                    <span class="tech-icon">🚀</span>
+                    <h3 class="tech-name">JavaScript</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="music-card">
-                <h3 class="music-title">"Answer"</h3>
-                <p class="music-artist">Guitar performance</p>
-                <p class="project-description">
-                    Professional guitar recording for this collaborative release, available on major streaming platforms.
-                </p>
-                <div class="project-links">
-                    <a href="https://music.apple.com/ph/album/answer/1677823917?i=1677823927" class="project-link">Apple Music</a>
+                <div class="tech-item" style="--proficiency: 85%">
+                    <span class="tech-icon">📘</span>
+                    <h3 class="tech-name">TypeScript</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 88%">
+                    <span class="tech-icon">🐍</span>
+                    <h3 class="tech-name">Python</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 80%">
+                    <span class="tech-icon">☕</span>
+                    <h3 class="tech-name">Java</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 75%">
+                    <span class="tech-icon">🦉</span>
+                    <h3 class="tech-name">Swift</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 92%">
+                    <span class="tech-icon">🎨</span>
+                    <h3 class="tech-name">HTML5/CSS</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -684,8 +802,7 @@
         <h2 class="section-title">Let's Connect</h2>
         <div class="contact-content">
             <p class="hero-description">
-                I'm always excited to collaborate on innovative music technology projects, 
-                discuss creative coding, or explore new opportunities in the intersection of music and tech.
+                I'm always excited to collaborate on innovative projects in mobile and web.
             </p>
             <div class="contact-links">
                 <a href="mailto:hl3838@columbia.edu" class="contact-link">
