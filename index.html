@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Hyorok Lee - Music Technologist</title>
+    <link rel="icon" href="images/guitar1.png" type="image/x-icon">
+    <title>Chris Hyorok Lee - Software Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -457,6 +458,15 @@
             width: var(--proficiency);
         }
 
+        /* Individual proficiency percentages */
+        .tech-item:nth-child(1) .proficiency-fill { width: 90%; }
+        .tech-item:nth-child(2) .proficiency-fill { width: 80%; }
+        .tech-item:nth-child(3) .proficiency-fill { width: 70%; }
+        .tech-item:nth-child(4) .proficiency-fill { width: 70%; }
+        .tech-item:nth-child(5) .proficiency-fill { width: 70%; }
+        .tech-item:nth-child(6) .proficiency-fill { width: 50%; }
+        .tech-item:nth-child(7) .proficiency-fill { width: 50%; }
+
 
         /* Contact Section */
         .contact-content {
@@ -583,7 +593,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#music">Music</a></li>
+                <li><a href="#music">Tech Stack</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -600,7 +610,7 @@
             <p class="hero-description">
                 Creating innovative intersections between music and technology. 
                 Currently pursuing MSCS at Columbia University, 
-                crafting tools that empower musicians and redefine creative expression.
+                crafting tools that empower musicians and have an impact on daily lives.
             </p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -626,6 +636,24 @@
     <section id="projects" class="fade-in">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">📱</div>
+                <h3 class="project-title">Vocal Studio</h3>
+                <p class="project-description">
+                    iOS app for vocal training that includes customizable vocal exercises and vocal warmups with full control over pitch range
+                    and speed. It features high-quality piano sounds -- offering a professional accomponiment experience from your phone.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Swift</span>
+                    <span class="tech-tag">SwiftUI</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Mobile</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://apps.apple.com/us/app/the-vocal-studio/id6744845802" class="project-link">View on the App Store</a>
+                </div>
+            </div>
+
             <div class="project-card">
                 <div class="project-image">🎵</div>
                 <h3 class="project-title">Sinebender</h3>
@@ -662,38 +690,20 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🌐</div>
-                <h3 class="project-title">Musical Circles</h3>
+                <div class="project-image">🎧</div>
+                <h3 class="project-title">Spotify Audio Features</h3>
                 <p class="project-description">
-                    3D interactive musical instrument built with Three.js and Tone.js. 
-                    Drag spheres in 3D space to create music and explore spatial audio relationships.
+                    Python tool for analyzing Spotify tracks and playlists, extracting audio features 
+                    like danceability, energy, and valence for music research and ML applications.
                 </p>
                 <div class="project-tech">
-                    <span class="tech-tag">Three.js</span>
-                    <span class="tech-tag">Tone.js</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">WebGL</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Spotify API</span>
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">Streamlit</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://musical-circles.onrender.com/" class="project-link">Live Demo</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">📱</div>
-                <h3 class="project-title">RubyLog</h3>
-                <p class="project-description">
-                    Business process management platform with web and mobile applications. 
-                    Built with React and React Native for efficient workflow management.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">React Native</span>
-                    <span class="tech-tag">Firebase</span>
-                    <span class="tech-tag">Mobile</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://rubylog.io/login" class="project-link">View Project</a>
+                    <a href="https://find-spotify-audio-features.streamlit.app/" class="project-link">Live Tool</a>
                 </div>
             </div>
 
@@ -716,20 +726,20 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🎧</div>
-                <h3 class="project-title">Spotify Audio Features</h3>
+                <div class="project-image">🌐</div>
+                <h3 class="project-title">Musical Circles</h3>
                 <p class="project-description">
-                    Python tool for analyzing Spotify tracks and playlists, extracting audio features 
-                    like danceability, energy, and valence for music research and ML applications.
+                    3D interactive musical instrument built with Three.js and Tone.js. 
+                    Drag spheres in 3D space to create music and explore spatial audio relationships.
                 </p>
                 <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Spotify API</span>
-                    <span class="tech-tag">Data Analysis</span>
-                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Three.js</span>
+                    <span class="tech-tag">Tone.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">WebGL</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://find-spotify-audio-features.streamlit.app/" class="project-link">Live Tool</a>
+                    <a href="https://musical-circles.onrender.com/" class="project-link">Live Demo</a>
                 </div>
             </div>
         </div>
@@ -739,31 +749,8 @@
         <h2 class="section-title">Tech Stack</h2>
         <div class="tech-stack">
             <div class="tech-grid">
+
                 <div class="tech-item" style="--proficiency: 90%">
-                    <span class="tech-icon">⚡</span>
-                    <h3 class="tech-name">C/C++</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 95%">
-                    <span class="tech-icon">🚀</span>
-                    <h3 class="tech-name">JavaScript</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 85%">
-                    <span class="tech-icon">📘</span>
-                    <h3 class="tech-name">TypeScript</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 88%">
                     <span class="tech-icon">🐍</span>
                     <h3 class="tech-name">Python</h3>
                     <div class="proficiency-bar">
@@ -772,14 +759,6 @@
                 </div>
 
                 <div class="tech-item" style="--proficiency: 80%">
-                    <span class="tech-icon">☕</span>
-                    <h3 class="tech-name">Java</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 75%">
                     <span class="tech-icon">🦉</span>
                     <h3 class="tech-name">Swift</h3>
                     <div class="proficiency-bar">
@@ -787,7 +766,39 @@
                     </div>
                 </div>
 
-                <div class="tech-item" style="--proficiency: 92%">
+                <div class="tech-item" style="--proficiency: 70%">
+                    <span class="tech-icon">⚡</span>
+                    <h3 class="tech-name">C/C++</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 70%">
+                    <span class="tech-icon">🚀</span>
+                    <h3 class="tech-name">JavaScript</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 70%">
+                    <span class="tech-icon">📘</span>
+                    <h3 class="tech-name">TypeScript</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 50%">
+                    <span class="tech-icon">☕</span>
+                    <h3 class="tech-name">Java</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 50%">
                     <span class="tech-icon">🎨</span>
                     <h3 class="tech-name">HTML5/CSS</h3>
                     <div class="proficiency-bar">
