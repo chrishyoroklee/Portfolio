@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/guitar1.png" type="image/x-icon">
     <title>Chris Hyorok Lee - Software Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -15,29 +15,28 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --accent: #f59e0b;
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #1a1a1a;
-            --bg-tertiary: #2a2a2a;
-            --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --border: #27272a;
-            --glass: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --bg: #f6f7fb;
+            --panel: #ffffff;
+            --ink: #0f172a;
+            --muted: #4b5563;
+            --line: #e5e7eb;
+            --accent: #0ea5e9;
+            --accent-strong: #22c55e;
+            --shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+            --radius: 18px;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+            background: radial-gradient(120% 120% at 10% 20%, rgba(34, 197, 94, 0.1), transparent),
+                        radial-gradient(140% 140% at 90% 0%, rgba(14, 165, 233, 0.16), transparent),
+                        var(--bg);
+            color: var(--ink);
             line-height: 1.6;
             overflow-x: hidden;
+            padding-top: 72px;
         }
 
-        /* Animated background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -45,14 +44,9 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            background: radial-gradient(50% 40% at 20% 60%, rgba(14, 165, 233, 0.12), transparent 60%),
+                        radial-gradient(60% 50% at 80% 20%, rgba(34, 197, 94, 0.12), transparent 70%);
+            filter: blur(30px);
         }
 
         /* Navigation */
@@ -61,10 +55,10 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 1rem 2rem;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
             z-index: 1000;
             transition: all 0.3s ease;
         }
@@ -78,9 +72,9 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--ink);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -92,30 +86,31 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .nav-links a {
-            color: var(--text-secondary);
+            color: var(--muted);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
             position: relative;
+            padding-bottom: 4px;
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary);
+            background: linear-gradient(90deg, var(--accent), var(--accent-strong));
             transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--text-primary);
+            color: var(--ink);
         }
 
         .nav-links a:hover::after {
@@ -124,58 +119,56 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            min-height: calc(100vh - 72px);
+            display: grid;
+            place-items: center;
+            text-align: left;
             position: relative;
-            overflow: hidden;
+            padding: 6rem 2rem 4rem;
         }
 
         .hero-content {
             max-width: 800px;
             z-index: 10;
-            animation: fadeInUp 1s ease-out;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-weight: 300;
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
         }
 
         .hero-description {
             font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            color: var(--muted);
+            max-width: 640px;
         }
 
         .cta-buttons {
             display: flex;
             gap: 1rem;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 1rem 1.8rem;
             border: none;
-            border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
@@ -184,67 +177,65 @@
             transition: all 0.3s ease;
             cursor: pointer;
             font-size: 1rem;
+            border-radius: 14px;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.25);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 14px 38px rgba(14, 165, 233, 0.28);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
+            background: #f1f5f9;
+            color: var(--ink);
+            border: 1px solid var(--line);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+            background: #e5e7eb;
+            transform: translateY(-1px);
         }
 
         /* Floating elements */
         .floating-element {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            opacity: 0.1;
-            animation: float-elements 6s ease-in-out infinite;
+            width: 220px;
+            height: 220px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.16), rgba(34, 197, 94, 0.16));
+            opacity: 0.35;
+            filter: blur(10px);
+            animation: float-elements 12s ease-in-out infinite;
         }
 
-        .floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .floating-element:nth-child(2) { top: 60%; right: 10%; animation-delay: 2s; }
-        .floating-element:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 4s; }
+        .floating-element:nth-child(1) { top: 10%; left: -8%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { bottom: -10%; right: -6%; animation-delay: 2.5s; }
+        .floating-element:nth-child(3) { top: 40%; right: 15%; animation-delay: 4s; }
 
         @keyframes float-elements {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            50% { transform: translateY(-14px) rotate(8deg); }
         }
 
         /* Sections */
         section {
-            padding: 5rem 2rem;
+            padding: 5rem 2.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-align: center;
-            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            letter-spacing: -0.02em;
         }
 
         /* Projects Grid */
@@ -256,14 +247,15 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(180deg, rgba(14, 165, 233, 0.04), rgba(34, 197, 94, 0.02) 18%, #fff 60%);
             border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(20px);
             padding: 2rem;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            background-color: var(--panel);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
         }
 
         .project-card::before {
@@ -272,45 +264,45 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 18px 38px rgba(15, 23, 42, 0.14);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
         }
 
         .project-image {
             width: 100%;
             height: 200px;
-            background: var(--bg-secondary);
+            background: linear-gradient(135deg, #0f172a, #1f2937);
             border-radius: 15px;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            opacity: 0.8;
+            color: #fff;
+            letter-spacing: -0.02em;
         }
 
         .project-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--text-primary);
+            color: var(--ink);
         }
 
         .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
             line-height: 1.6;
         }
 
@@ -322,12 +314,12 @@
         }
 
         .tech-tag {
-            background: rgba(99, 102, 241, 0.2);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            background: #f1f5f9;
+            color: var(--ink);
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
         .project-links {
@@ -336,24 +328,24 @@
         }
 
         .project-link {
-            color: var(--primary);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .project-link:hover {
-            color: var(--accent);
+            color: var(--ink);
         }
 
         /* Tech Stack Section */
         .tech-stack {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 30px;
-            padding: 3rem;
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.5rem;
             margin: 2rem 0;
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
         }
 
         .tech-grid {
@@ -364,15 +356,14 @@
         }
 
         .tech-item {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.4s ease;
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: left;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(20px);
+            border: 1px solid var(--line);
         }
 
         .tech-item::before {
@@ -382,24 +373,24 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(34, 197, 94, 0.12));
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
             z-index: 1;
         }
 
         .tech-item:hover::before {
-            opacity: 0.1;
+            opacity: 1;
         }
 
         .tech-item:hover {
             transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 16px 30px rgba(15, 23, 42, 0.14);
         }
 
         .tech-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem;
             display: block;
             position: relative;
             z-index: 2;
@@ -411,17 +402,17 @@
         }
 
         .tech-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+            color: var(--ink);
             position: relative;
             z-index: 2;
         }
 
         .tech-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+            color: var(--muted);
+            font-size: 0.95rem;
             position: relative;
             z-index: 2;
         }
@@ -437,10 +428,10 @@
         /* Proficiency bars */
         .proficiency-bar {
             width: 100%;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 2px;
-            margin-top: 1rem;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin-top: 0.75rem;
             overflow: hidden;
             position: relative;
             z-index: 2;
@@ -448,8 +439,8 @@
 
         .proficiency-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+            border-radius: 4px;
             transition: width 2s ease;
             width: 0%;
         }
@@ -471,8 +462,13 @@
         /* Contact Section */
         .contact-content {
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
         }
 
         .contact-links {
@@ -487,14 +483,14 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--text-secondary);
+            color: var(--muted);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .contact-link:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         /* Animations */
@@ -517,11 +513,10 @@
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1rem;
+                display: none;
             }
             
-            .hero h1 {
-                font-size: 3rem;
-            }
+            .hero-content { text-align: left; }
             
             .cta-buttons {
                 flex-direction: column;
@@ -545,13 +540,13 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #e5e7eb;
             z-index: 1001;
         }
 
         .scroll-progress {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            background: linear-gradient(90deg, var(--accent), var(--accent-strong));
             width: 0%;
             transition: width 0.1s ease;
         }
@@ -564,19 +559,18 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(20px);
-            color: var(--text-primary);
-            font-size: 1.2rem;
+            background: #0f172a;
+            border: 1px solid #0f172a;
+            color: #fff;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 1000;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
         }
 
         .theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -609,7 +603,7 @@
             <p class="hero-subtitle">Software Engineer</p>
             <p class="hero-description">
                 MSCS @ Columbia.
-                Software engineer working at the intersection of mobile, AI, and user experience—with a creative background in music.
+                Software engineer working at the intersection of mobile, AI, and user experience with a creative background in music.
             </p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
