@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/guitar1.png" type="image/x-icon">
     <title>Chris Hyorok Lee - Software Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -29,8 +31,8 @@
         body {
             font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
             background: radial-gradient(120% 120% at 10% 20%, rgba(34, 197, 94, 0.1), transparent),
-                        radial-gradient(140% 140% at 90% 0%, rgba(14, 165, 233, 0.16), transparent),
-                        var(--bg);
+                radial-gradient(140% 140% at 90% 0%, rgba(14, 165, 233, 0.16), transparent),
+                var(--bg);
             color: var(--ink);
             line-height: 1.6;
             overflow-x: hidden;
@@ -45,7 +47,7 @@
             height: 100%;
             z-index: -1;
             background: radial-gradient(50% 40% at 20% 60%, rgba(14, 165, 233, 0.12), transparent 60%),
-                        radial-gradient(60% 50% at 80% 20%, rgba(34, 197, 94, 0.12), transparent 70%);
+                radial-gradient(60% 50% at 80% 20%, rgba(34, 197, 94, 0.12), transparent 70%);
             filter: blur(30px);
         }
 
@@ -214,13 +216,34 @@
             animation: float-elements 12s ease-in-out infinite;
         }
 
-        .floating-element:nth-child(1) { top: 10%; left: -8%; animation-delay: 0s; }
-        .floating-element:nth-child(2) { bottom: -10%; right: -6%; animation-delay: 2.5s; }
-        .floating-element:nth-child(3) { top: 40%; right: 15%; animation-delay: 4s; }
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: -8%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            bottom: -10%;
+            right: -6%;
+            animation-delay: 2.5s;
+        }
+
+        .floating-element:nth-child(3) {
+            top: 40%;
+            right: 15%;
+            animation-delay: 4s;
+        }
 
         @keyframes float-elements {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-14px) rotate(8deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-14px) rotate(8deg);
+            }
         }
 
         /* Sections */
@@ -417,13 +440,33 @@
             z-index: 2;
         }
 
-        .tech-item:nth-child(1) { animation-delay: 0.1s; }
-        .tech-item:nth-child(2) { animation-delay: 0.2s; }
-        .tech-item:nth-child(3) { animation-delay: 0.3s; }
-        .tech-item:nth-child(4) { animation-delay: 0.4s; }
-        .tech-item:nth-child(5) { animation-delay: 0.5s; }
-        .tech-item:nth-child(6) { animation-delay: 0.6s; }
-        .tech-item:nth-child(7) { animation-delay: 0.7s; }
+        .tech-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .tech-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .tech-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .tech-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .tech-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .tech-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .tech-item:nth-child(7) {
+            animation-delay: 0.7s;
+        }
 
         /* Proficiency bars */
         .proficiency-bar {
@@ -450,13 +493,33 @@
         }
 
         /* Individual proficiency percentages */
-        .tech-item:nth-child(1) .proficiency-fill { width: 90%; }
-        .tech-item:nth-child(2) .proficiency-fill { width: 80%; }
-        .tech-item:nth-child(3) .proficiency-fill { width: 70%; }
-        .tech-item:nth-child(4) .proficiency-fill { width: 70%; }
-        .tech-item:nth-child(5) .proficiency-fill { width: 70%; }
-        .tech-item:nth-child(6) .proficiency-fill { width: 50%; }
-        .tech-item:nth-child(7) .proficiency-fill { width: 50%; }
+        .tech-item:nth-child(1) .proficiency-fill {
+            width: 90%;
+        }
+
+        .tech-item:nth-child(2) .proficiency-fill {
+            width: 80%;
+        }
+
+        .tech-item:nth-child(3) .proficiency-fill {
+            width: 70%;
+        }
+
+        .tech-item:nth-child(4) .proficiency-fill {
+            width: 70%;
+        }
+
+        .tech-item:nth-child(5) .proficiency-fill {
+            width: 70%;
+        }
+
+        .tech-item:nth-child(6) .proficiency-fill {
+            width: 50%;
+        }
+
+        .tech-item:nth-child(7) .proficiency-fill {
+            width: 50%;
+        }
 
 
         /* Contact Section */
@@ -499,6 +562,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -515,18 +579,20 @@
                 gap: 1rem;
                 display: none;
             }
-            
-            .hero-content { text-align: left; }
-            
+
+            .hero-content {
+                text-align: left;
+            }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .contact-links {
                 flex-direction: column;
                 gap: 1rem;
@@ -550,12 +616,12 @@
             width: 0%;
             transition: width 0.1s ease;
         }
-
     </style>
 </head>
+
 <body>
     <div class="bg-animation"></div>
-    
+
     <div class="scroll-indicator">
         <div class="scroll-progress" id="scrollProgress"></div>
     </div>
@@ -576,13 +642,14 @@
         <div class="floating-element"></div>
         <div class="floating-element"></div>
         <div class="floating-element"></div>
-        
+
         <div class="hero-content">
             <h1>Chris Hyorok Lee</h1>
             <p class="hero-subtitle">Software Engineer</p>
             <p class="hero-description">
                 MSCS @ Columbia.
-                Software engineer working at the intersection of mobile, AI, and user experience with a creative background in music.
+                Software engineer working at the intersection of mobile, AI, and user experience with a creative
+                background in music.
             </p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -612,8 +679,10 @@
                 <div class="project-image">📱</div>
                 <h3 class="project-title">Vocal Studio</h3>
                 <p class="project-description">
-                    iOS app for vocal training that includes customizable vocal exercises and vocal warmups with full control over pitch range
-                    and speed. It features high-quality piano sounds -- offering a professional accomponiment experience from your phone.
+                    iOS app for vocal training that includes customizable vocal exercises and vocal warmups with full
+                    control over pitch range
+                    and speed. It features high-quality piano sounds -- offering a professional accomponiment experience
+                    from your phone.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">Swift</span>
@@ -627,10 +696,49 @@
             </div>
 
             <div class="project-card">
+                <div class="project-image" style="padding: 0; overflow: hidden;">
+                    <img src="images/sugameter-logo.png" alt="SugaMeter"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="project-title">SugaMeter</h3>
+                <p class="project-description">
+                    iOS app focused on tracking added sugar and making sure sugar level is not too high.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">iOS</span>
+                    <span class="tech-tag">Swift</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://apps.apple.com/us/app/sugameter-daily-sugar-tracker/id6757822814"
+                        class="project-link">View App</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image" style="padding: 0; overflow: hidden;">
+                    <img src="images/crimp-logo.png" alt="Crimp Log"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="project-title">Crimp Log</h3>
+                <p class="project-description">
+                    Climbing Training tracking and analytics iOS app for boulderers and sport climbers.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">iOS</span>
+                    <span class="tech-tag">Swift</span>
+                    <span class="tech-tag">Analytics</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://apps.apple.com/us/app/crimp-log-climbing-training/id6757508967"
+                        class="project-link">View App</a>
+                </div>
+            </div>
+
+            <div class="project-card">
                 <div class="project-image">🎵</div>
                 <h3 class="project-title">Sinebender</h3>
                 <p class="project-description">
-                    Interactive mobile musical instrument with touch controls and gyroscopic pitch bending. 
+                    Interactive mobile musical instrument with touch controls and gyroscopic pitch bending.
                     A web-based tool that transforms your phone into a creative sound device.
                 </p>
                 <div class="project-tech">
@@ -647,7 +755,7 @@
                 <div class="project-image">🤖</div>
                 <h3 class="project-title">Voice Chatbot</h3>
                 <p class="project-description">
-                    RAG-based AI chatbot trained on voice textbooks, providing specialized 
+                    RAG-based AI chatbot trained on voice textbooks, providing specialized
                     vocal training advice and techniques for singers and voice coaches.
                 </p>
                 <div class="project-tech">
@@ -665,7 +773,8 @@
                 <div class="project-image">🎧</div>
                 <h3 class="project-title">Spotify Metadata Explorer</h3>
                 <p class="project-description">
-                    A Streamlit web app that fetches and exports metadata from Spotify tracks, albums, artists, and playlists. Built to work with Spotify's Development Mode restrictions (post-November 2024).
+                    A Streamlit web app that fetches and exports metadata from Spotify tracks, albums, artists, and
+                    playlists. Built to work with Spotify's Development Mode restrictions (post-November 2024).
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">Python</span>
@@ -674,7 +783,8 @@
                     <span class="tech-tag">Streamlit</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/chrishyoroklee/Spotify-Metadata-Explorer" class="project-link">View Code</a>
+                    <a href="https://github.com/chrishyoroklee/Spotify-Metadata-Explorer" class="project-link">View
+                        Code</a>
                 </div>
             </div>
 
@@ -682,7 +792,7 @@
                 <div class="project-image">🎛️</div>
                 <h3 class="project-title">9-Button Arduino Synth</h3>
                 <p class="project-description">
-                    Hardware synthesizer with 9 buttons creating unique sounds through different 
+                    Hardware synthesizer with 9 buttons creating unique sounds through different
                     button combinations. Built with Arduino and custom C++ programming.
                 </p>
                 <div class="project-tech">
@@ -700,7 +810,7 @@
                 <div class="project-image">🌐</div>
                 <h3 class="project-title">Musical Circles</h3>
                 <p class="project-description">
-                    3D interactive musical instrument built with Three.js and Tone.js. 
+                    3D interactive musical instrument built with Three.js and Tone.js.
                     Drag spheres in 3D space to create music and explore spatial audio relationships.
                 </p>
                 <div class="project-tech">
@@ -718,7 +828,9 @@
                 <div class="project-image">📈</div>
                 <h3 class="project-title">TSLL-tracker — TSLA Multi‑Horizon Forecasts</h3>
                 <p class="project-description">
-                    LightGBM-based TSLA forecasting with engineered features, market context (SPY, VIX), quantile intervals, and a daily runner for automated next‑day and 5‑day predictions. Includes the original research MVP plus a modular pipeline with persistence, logging, and CLI runners.
+                    LightGBM-based TSLA forecasting with engineered features, market context (SPY, VIX), quantile
+                    intervals, and a daily runner for automated next‑day and 5‑day predictions. Includes the original
+                    research MVP plus a modular pipeline with persistence, logging, and CLI runners.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">Python</span>
@@ -845,7 +957,7 @@
             const winHeight = window.innerHeight;
             const scrollPercent = scrollTop / (docHeight - winHeight);
             const scrollPercentRounded = Math.round(scrollPercent * 100);
-            
+
             scrollProgress.style.width = scrollPercentRounded + '%';
         });
 
@@ -890,7 +1002,7 @@
         const subtitle = document.querySelector('.hero-subtitle');
         const originalText = subtitle.textContent;
         subtitle.textContent = '';
-        
+
         let i = 0;
         const typeWriter = () => {
             if (i < originalText.length) {
@@ -899,8 +1011,9 @@
                 setTimeout(typeWriter, 100);
             }
         };
-        
+
         setTimeout(typeWriter, 1000);
     </script>
 </body>
+
 </html>
