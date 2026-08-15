@@ -732,30 +732,68 @@
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image" style="padding: 0; overflow: hidden;">
-                    <img src="images/Lyra.png" alt="Lyra"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <h3 class="project-title">Lyra - AI Therapy Companion</h3>
+                <div class="project-image">🧵</div>
+                <h3 class="project-title">Silhouet</h3>
                 <p class="project-description">
-                    A privacy-first, fully local AI conversational therapy companion designed to run entirely on-device with no cloud APIs. 
-                    The app combines real-time speech recognition, a locally hosted large language model, and natural text-to-speech to 
-                    deliver supportive, voice-based conversations while ensuring that no user data ever leaves the machine. Built for 
-                    Snapdragon PCs, it demonstrates how an end-to-end AI pipeline — ASR, LLM, and TTS — can be optimized for consumer 
-                    hardware to provide accessible, stigma-free mental health support with strong privacy guarantees.
+                    Current role. Silhouet is a platform where fashion brands build tech packs, connect with factories,
+                    and track a product across its entire lifecycle. I built the agent that guides brands through their
+                    technical spec and tech pack, giving design advice and filling out domain-specific sections like the
+                    Bill of Materials and sizing tables.
                 </p>
-            <div class="project-tech">
-                <span class="tech-tag">Electron</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Local LLM</span>
-                <span class="tech-tag">llama-cpp</span>
-                <span class="tech-tag">On-Device AI</span>
-            </div>
+                <div class="project-tech">
+                    <span class="tech-tag">AI Agents</span>
+                    <span class="tech-tag">LLM</span>
+                    <span class="tech-tag">Full Stack</span>
+                    <span class="tech-tag">Fashion Tech</span>
+                </div>
                 <div class="project-links">
-                    <a href="https://github.com/chrishyoroklee/conversational-therapy-companion" class="project-link">View Project</a>
+                    <a href="https://silhouetapp.com/" class="project-link" target="_blank" rel="noopener">Visit Site</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🎚️</div>
+                <h3 class="project-title">MaxPy Studio</h3>
+                <p class="project-description">
+                    A platform that generates Max for Live audio plugins from plain text descriptions. Its agent turns
+                    natural language into a Python intermediate representation via the open source MaxPyLang library,
+                    then compiles it to Max MSP and Max for Live devices. It reached 60+ users and led to a peer-reviewed
+                    paper on how people work with intermediate representations in LLM-assisted audio programming.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">LLM</span>
+                    <span class="tech-tag">Max MSP</span>
+                    <span class="tech-tag">DSL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.maxpystudio.com/" class="project-link" target="_blank" rel="noopener">Visit
+                        Site</a>
+                    <a href="https://github.com/Barnard-PL-Labs/maxpy-studio" class="project-link" target="_blank"
+                        rel="noopener">View Code</a>
+                    <a href="https://genaicreativity.org/icml2026/files/53/53_paper.pdf" class="project-link"
+                        target="_blank" rel="noopener">Read Paper</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🐍</div>
+                <h3 class="project-title">MaxPyLang <span
+                        style="font-size: 0.75em; font-weight: 500; color: var(--muted);">· Contributor</span></h3>
+                <p class="project-description">
+                    Open source Python package for programmatically generating Max MSP patches, and the intermediate
+                    representation that MaxPy Studio compiles to. I contributed as one of the core maintainers,
+                    extending the library's coverage of Max objects and patching primitives.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Max MSP</span>
+                    <span class="tech-tag">Open Source</span>
+                    <span class="tech-tag">Code Generation</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Barnard-PL-Labs/MaxPyLang" class="project-link" target="_blank"
+                        rel="noopener">View Code</a>
                 </div>
             </div>
 
@@ -784,16 +822,47 @@
 
             <div class="project-card">
                 <div class="project-image" style="padding: 0; overflow: hidden;">
+                    <img src="images/Lyra.png" alt="Lyra"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="project-title">Lyra - AI Therapy Companion</h3>
+                <p class="project-description">
+                    A privacy-first AI therapy companion that runs entirely on-device with no cloud APIs, combining
+                    real-time speech recognition, a local large language model, and natural text-to-speech for
+                    supportive voice conversations. Built for Snapdragon PCs, it shows how a full ASR, LLM, and TTS
+                    pipeline can be optimized for consumer hardware without any user data leaving the machine.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Electron</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Local LLM</span>
+                    <span class="tech-tag">llama-cpp</span>
+                    <span class="tech-tag">On-Device AI</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/chrishyoroklee/conversational-therapy-companion" class="project-link">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image" style="padding: 0; overflow: hidden;">
                     <img src="images/sugameter-logo.png" alt="SugaMeter"
                         style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 class="project-title">SugaMeter</h3>
                 <p class="project-description">
-                    iOS app focused on tracking added sugar and making sure sugar level is not too high.
+                    iOS app focused on tracking added sugar and making sure sugar level is not too high. Built around a
+                    polished, gamified UI/UX that turns logging into a daily habit through streaks, progress feedback,
+                    and low-friction entry.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">iOS</span>
                     <span class="tech-tag">Swift</span>
+                    <span class="tech-tag">UI/UX</span>
+                    <span class="tech-tag">Gamification</span>
                 </div>
                 <div class="project-links">
                     <a href="https://apps.apple.com/us/app/sugameter-daily-sugar-tracker/id6757822814"
@@ -801,6 +870,7 @@
                 </div>
             </div>
 
+            <!-- Crimp Log (hidden)
             <div class="project-card">
                 <div class="project-image" style="padding: 0; overflow: hidden;">
                     <img src="images/crimp-logo.png" alt="Crimp Log"
@@ -820,6 +890,7 @@
                         class="project-link">View App</a>
                 </div>
             </div>
+            -->
 
             <div class="project-card">
                 <div class="project-image">🎵</div>
@@ -893,6 +964,7 @@
                 </div>
             </div>
 
+            <!-- TSLL-tracker (hidden)
             <div class="project-card">
                 <div class="project-image">📈</div>
                 <h3 class="project-title">TSLL-tracker — TSLA Multi‑Horizon Forecasts</h3>
@@ -911,6 +983,7 @@
                     <a href="https://github.com/chrishyoroklee/the-oracle" class="project-link">View Code</a>
                 </div>
             </div>
+            -->
         </div>
     </section>
 
@@ -940,7 +1013,23 @@
                     </div>
                 </div>
 
+                <div class="tech-item" style="--proficiency: 85%">
+                    <span class="tech-icon">🚀</span>
+                    <h3 class="tech-name">JavaScript/TypeScript</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
                 <div class="tech-item" style="--proficiency: 80%">
+                    <span class="tech-icon">🎨</span>
+                    <h3 class="tech-name">HTML5/CSS</h3>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill"></div>
+                    </div>
+                </div>
+
+                <div class="tech-item" style="--proficiency: 55%">
                     <span class="tech-icon">🦉</span>
                     <h3 class="tech-name">Swift</h3>
                     <div class="proficiency-bar">
@@ -948,7 +1037,7 @@
                     </div>
                 </div>
 
-                <div class="tech-item" style="--proficiency: 70%">
+                <div class="tech-item" style="--proficiency: 30%">
                     <span class="tech-icon">⚡</span>
                     <h3 class="tech-name">C/C++</h3>
                     <div class="proficiency-bar">
@@ -956,33 +1045,9 @@
                     </div>
                 </div>
 
-                <div class="tech-item" style="--proficiency: 70%">
-                    <span class="tech-icon">🚀</span>
-                    <h3 class="tech-name">JavaScript</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 70%">
-                    <span class="tech-icon">📘</span>
-                    <h3 class="tech-name">TypeScript</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 50%">
+                <div class="tech-item" style="--proficiency: 20%">
                     <span class="tech-icon">☕</span>
                     <h3 class="tech-name">Java</h3>
-                    <div class="proficiency-bar">
-                        <div class="proficiency-fill"></div>
-                    </div>
-                </div>
-
-                <div class="tech-item" style="--proficiency: 50%">
-                    <span class="tech-icon">🎨</span>
-                    <h3 class="tech-name">HTML5/CSS</h3>
                     <div class="proficiency-bar">
                         <div class="proficiency-fill"></div>
                     </div>
