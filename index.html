@@ -1075,8 +1075,12 @@
         });
 
         // Fade in animation on scroll
+        // threshold is a fraction of the target, so a section taller than 10x the
+        // viewport can never reach 0.1 and would stay hidden forever. On phones the
+        // projects grid is one column and hits exactly that. Fire on first contact
+        // instead; rootMargin still holds the fade until it is properly in view.
         const observerOptions = {
-            threshold: 0.1,
+            threshold: 0,
             rootMargin: '0px 0px -100px 0px'
         };
 
